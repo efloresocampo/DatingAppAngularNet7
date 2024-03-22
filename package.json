@@ -1,0 +1,25 @@
+{
+  "name": "datingappnet6angular14",
+  "version": "1.0.0",
+  "description": "Datting app with Net Core 6 and Angular 14",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgar-flores-blackbaud/DatingAppNet6.git"
+  },
+  "keywords": [
+    "datingappnet6"
+  ],
+  "author": "Edgar Flores",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edgar-flores-blackbaud/DatingAppNet6/issues"
+  },
+  "homepage": "https://github.com/edgar-flores-blackbaud/DatingAppNet6#readme",
+  "dependencies": {
+    "@angular/cli": "^14.2.3"
+  }
+}
