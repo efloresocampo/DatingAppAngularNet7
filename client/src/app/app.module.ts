@@ -9,7 +9,6 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MemberListComponent } from './members/member-list/member-list.component';
-import { MemberDetailComponent } from './members/member-detail/member-detail.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { SharedModule } from './modules/shared/shared.module';
@@ -24,6 +23,8 @@ import { LoadingInterceptor } from './interceptors/loading.interceptor';
 import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
 import { TextInputComponent } from './forms/text-input/text-input.component';
 import { DatePickerComponent } from './forms/date-picker/date-picker.component';
+import { RouteReuseStrategy } from '@angular/router';
+import { CustomRouteReuseStrategy } from './services/customRouteReuseStrategy';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,6 @@ import { DatePickerComponent } from './forms/date-picker/date-picker.component';
     HomeComponent,
     RegisterComponent,
     MemberListComponent,
-    MemberDetailComponent,
     ListsComponent,
     MessagesComponent,
     TestErrorComponent,
@@ -68,6 +68,10 @@ import { DatePickerComponent } from './forms/date-picker/date-picker.component';
       provide: HTTP_INTERCEPTORS,
       useClass: LoadingInterceptor,
       multi: true,
+    },
+    {
+      provide: RouteReuseStrategy,
+      useClass: CustomRouteReuseStrategy
     }
   ],
   bootstrap: [AppComponent]
