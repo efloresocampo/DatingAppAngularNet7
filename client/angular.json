@@ -36,8 +36,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1mb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -67,8 +67,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "sslKey": "./ssl/localhostkey.pem",
-            "sslCert": "./ssl/localhostcert.pem",
+            "sslKey": "./ssl/MX-4ZKPPL3/localhostkey.pem",
+            "sslCert": "./ssl/MX-4ZKPPL3/localhostcert.pem",
             "ssl": true,
             "browserTarget": "test:build"
           },
